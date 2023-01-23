@@ -157,7 +157,7 @@ func (config *Config) UseFcPadding() bool {
 /// \param deviceId the GPU card to use.
 ///
 func (config *Config) EnableUseGpu(memorySize uint64, deviceId int32) {
-	C.PD_ConfigEnableUseGpu(config.c, C.uint64_t(memorySize), C.int32_t(deviceId), 0)
+	C.PD_ConfigEnableUseGpu(config.c, C.uint64_t(memorySize), C.int32_t(deviceId))
 }
 
 ///
@@ -209,7 +209,7 @@ func (config *Config) EnableXpu(l3WorkspaceSize int32, locked bool, autotune boo
 		C.free(unsafe.Pointer(cPrecision))
 	}()
 	C.PD_ConfigEnableXpu(config.c, C.int32_t(l3WorkspaceSize), cvtGoBoolToPD(locked), cvtGoBoolToPD(autotune),
-		cAutotuneFile, cPrecision, cvtGoBoolToPD(adaptiveSeqlen), cvtGoBoolToPD(enableMultiStream))
+		cAutotuneFile, cPrecision, cvtGoBoolToPD(adaptiveSeqlen))
 }
 
 ///
