@@ -1,4 +1,4 @@
-paddle_inference_c/
+paddle_inference_c
 .idea/
 mobilenetv1.tgz
 mobilenetv1
