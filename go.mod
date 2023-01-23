@@ -1,3 +1,3 @@
-module github.com/paddlepaddle/paddle/paddle/fluid/inference/goapi
+module github.com/m4hi2/paddle-api
 
-go 1.15
+go 1.19
