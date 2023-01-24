@@ -1,3 +1,3 @@
-module github.com/m4hi2/paddle-api
+module github.com/m4hi2/paddle
 
-go 1.19
+go 1.15
